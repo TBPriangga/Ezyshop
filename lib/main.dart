@@ -6,11 +6,12 @@ import 'core/configs/theme/app_colors.dart';
 import 'firebase_options.dart';
 import 'presentation/splash/bloc/splash_cubit.dart';
 import 'presentation/splash/pages/splash.dart';
+import 'service_locator.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // await initializeDependencies();
+  await initializeDependencies();
   runApp(const MyApp());
 }
 

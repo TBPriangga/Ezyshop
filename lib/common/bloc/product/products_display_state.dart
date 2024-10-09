@@ -1,13 +1,14 @@
-// import 'package:ecommerce/domain/product/entities/product.dart';
+import '../../../domain/product/entities/product.dart';
 
-// abstract class ProductsDisplayState {}
+abstract class ProductsDisplayState {}
 
-// class ProductsInitialState extends ProductsDisplayState {}
-// class ProductsLoading extends ProductsDisplayState {}
+class ProductsInitialState extends ProductsDisplayState {}
 
-// class ProductsLoaded extends ProductsDisplayState {
-//   final List<ProductEntity> products;
-//   ProductsLoaded({required this.products});
-// }
+class ProductsLoading extends ProductsDisplayState {}
 
-// class LoadProductsFailure extends ProductsDisplayState {}
+class ProductsLoaded extends ProductsDisplayState {
+  final List<ProductEntity> products;
+  ProductsLoaded({required this.products});
+}
+
+class LoadProductsFailure extends ProductsDisplayState {}
